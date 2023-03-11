@@ -52,7 +52,7 @@ Composable function for Vue 3 and Popper.js
 
 ### What to do with those
 
-```html
+```vue
 <template>
   <button 
     ref="reference" 
@@ -68,8 +68,7 @@ Composable function for Vue 3 and Popper.js
     Popper content
   </div>
 </template>
-```
-```javascript
+
 <script setup>
 {
   isPopperVisible,
