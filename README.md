@@ -24,7 +24,7 @@ Light composable function for Vue 3 and Popper.js
 
 ### What to plug into function
 
-**options** allows setting common Popper options and modifiers
+**options** is optional object that allows setting common Popper options and modifiers
 
 - placement - is one of valid Popper placement options. Default: "auto".
 - offsetX and offsetY - lets you displace a popper element from its reference element. Default: 0.
@@ -78,10 +78,8 @@ import usePopper from "usePopper"
   popper,
   togglePopper
 } = usePopper({
-  placement: "auto",
-  offsetX: 0,
-  offsetY: 0,
-  noFlip: false,
+  placement: "bottom-start",
+  offsetY: 5,
 })
 </script>
 ```
@@ -115,9 +113,6 @@ import usePopper from "usePopper"
   togglePopper
 } = usePopper({
   placement: "auto",
-  offsetX: 0,
-  offsetY: 0,
-  noFlip: false,
 },
 [
   {
@@ -162,12 +157,11 @@ import usePopper from "usePopper"
   isPopperVisible,
   reference,
   popper,
-  togglePopper
+  togglePopper,
+  lockPopper,
+  destroyPopperInstance
 } = usePopper({
   placement: "auto",
-  offsetX: 0,
-  offsetY: 0,
-  noFlip: false,
 })
 </script>
 
