@@ -24,7 +24,7 @@ export default function usePopper(
     offsetX = 0,
     offsetY = 0,
     noFlip = false,
-  } = options;
+  } = options || {};
 
   let isPopperVisible = ref(false);
   let instance = null;
@@ -156,7 +156,7 @@ export default function usePopper(
   return {
     isPopperVisible,
     reference,
-    referenceInstance: localReference,
+    rawReference: localReference,
     updatePopperInstance,
     popper,
     showPopper,
